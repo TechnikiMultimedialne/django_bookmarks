@@ -1,6 +1,7 @@
 import re
 from django.contrib.auth.models import User
 from django import forms
+
 class RegistrationForm(forms.Form):
     username = forms.CharField(label=u'Username', max_length=30)
     email = forms.EmailField(label=u'Email')
@@ -43,4 +44,10 @@ class BookmarkSaveForm(forms.Form):
         label=u'Tags',
         required=False,
         widget=forms.TextInput(attrs={'size': 64})
+    )
+    
+class SearchForm(forms.Form):
+    query = forms.CharField(
+        label=u'Enter a keyword to search for',
+        widget=forms.TextInput(attrs={'size': 32})
     )
