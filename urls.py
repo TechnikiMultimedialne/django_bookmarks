@@ -9,10 +9,12 @@ site_media = os.path.join(
 urlpatterns = patterns('',
     # Browsing
     (r'^$', main_page),
+    (r'^popular/$', popular_page),
     (r'^user/(\w+)/$', user_page),
     (r'^tag/([^\s]+)/$', tag_page),
     (r'^tag/$', tag_cloud_page),
     (r'^search/$', search_page),
+    (r'^bookmark/(\d+)/$', bookmark_page),
     
     # Session management
     (r'^login/$', 'django.contrib.auth.views.login'),
@@ -23,8 +25,12 @@ urlpatterns = patterns('',
 
     # Account management
     (r'^save/$', bookmark_save_page),
+    (r'^vote/$', bookmark_vote_page),
     
     # Site media
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', 
         {'document_root': site_media}),
+    
+    # Commments
+    (r'^comments/', include('django.contrib.comments.urls')),
 )
