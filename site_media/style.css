@@ -31,4 +31,5 @@ textarea {
 	margin: 1em;
 	padding: 5px;
 	border: 1px solid #000;
+	max-width: 40%;
 }
