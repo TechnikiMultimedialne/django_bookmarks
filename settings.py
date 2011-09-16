@@ -90,7 +90,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django_bookmarks.bookmarks',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

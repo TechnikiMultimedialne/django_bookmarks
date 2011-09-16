@@ -86,6 +86,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.comments',
     'django.contrib.messages',
     'django_bookmarks.bookmarks',
     # Uncomment the next line to enable the admin:

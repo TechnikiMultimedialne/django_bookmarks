@@ -2,6 +2,9 @@ import os
 from django.conf.urls.defaults import *
 from django.views.generic.simple import direct_to_template
 from bookmarks.views import *
+from django.contrib import admin
+
+admin.autodiscover()
 
 site_media = os.path.join(
     os.path.dirname(__file__), 'site_media'
@@ -33,4 +36,7 @@ urlpatterns = patterns('',
     
     # Commments
     (r'^comments/', include('django.contrib.comments.urls')),
+    
+    # Admin interface
+    (r'^admin/(.*)', admin.site.root),
 )
